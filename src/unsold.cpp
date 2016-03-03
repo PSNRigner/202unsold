@@ -5,7 +5,7 @@
 // Login   <frasse_l@epitech.net>
 // 
 // Started on  Wed Mar  2 12:54:17 2016 loic frasse-mathon
-// Last update Thu Mar  3 03:08:12 2016 loic frasse-mathon
+// Last update Thu Mar  3 03:18:24 2016 loic frasse-mathon
 //
 
 #include <iostream>
@@ -48,7 +48,10 @@ void	uns::Unsold::Calc_tab()
 	  sum[5] += tab[x / 10 - 1][y / 10 - 1];
 	  x += 10;
 	}
-      std::cout << "\t" << sum[5] << std::endl;
+      if (y == 60)
+	std::cout << "\t1" << std::endl;
+      else
+	std::cout << "\t" << sum[5] << std::endl;
       tab[x / 10 - 1][y / 10 - 1] = sum[5];
       y += 10;
     }
@@ -76,12 +79,12 @@ void	uns::Unsold::Calc_zlaw()
       x++;
     }
   x = 0;
-  while (x < 10)
+  while (x < 9)
     {
       std::cout << "\t" << ztab[x];
       x++;
     }
-  std::cout << std::endl;
+  std::cout << "\t1" << std::endl;
 }
 
 void	uns::Unsold::Calc_variance()
